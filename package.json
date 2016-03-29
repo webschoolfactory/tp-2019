@@ -1,12 +1,12 @@
 {
-  "name": "hackathon-starter",
-  "version": "3.5.0",
+  "name": "hackathon-starter-tp2019",
+  "version": "3.5.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/sahat/hackathon-starter.git"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "pm2 start /src/app/app.js -i 1 --no-daemon --watch",
     "test": "mocha --reporter spec --timeout 5000"
   },
   "dependencies": {
@@ -51,6 +51,7 @@
     "passport-openid": "^0.4.0",
     "passport-twitter": "^1.0.4",
     "paypal-rest-sdk": "^1.6.8",
+    "pm2": "^1.0.2",
     "request": "^2.69.0",
     "stripe": "^4.4.0",
     "tumblr.js": "^0.0.7",
