@@ -7,7 +7,8 @@
   },
   "scripts": {
     "start": "pm2 start /src/app/app.js -i 1 --no-daemon --watch",
-    "test": "mocha --reporter spec --timeout 5000"
+    "test": "/src/node_modules/.bin/_mocha --reporter spec --timeout 5000 /src/app/test/**/*.js",
+    "test:container": "docker exec tp2019-web npm test"
   },
   "dependencies": {
     "async": "^1.5.2",
