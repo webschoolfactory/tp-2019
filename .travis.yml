@@ -33,3 +33,4 @@ script:
   - docker version
   - docker-compose version
   - ./.bin/docker-test.sh
+  - ./.bin/docker-e2e.sh

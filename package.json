@@ -9,7 +9,8 @@
     "start": "node app.js",
     "test": "_mocha --reporter spec --timeout 5000 test/**/*.js",
     "coverage": "istanbul cover _mocha -- --reporter spec --timeout 5000 test/**/*.js",
-    "coveralls": "npm run coverage && ./node_modules/.bin/coveralls < coverage/lcov.info"
+    "coveralls": "npm run coverage && ./node_modules/.bin/coveralls < coverage/lcov.info",
+    "e2e": "./node_modules/.bin/wdio"
   },
   "dependencies": {
     "async": "^1.5.2",
@@ -66,7 +67,11 @@
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.2",
     "mocha": "^2.4.5",
-    "supertest": "^1.2.0"
+    "supertest": "^1.2.0",
+    "wdio-dot-reporter": "0.0.5",
+    "wdio-mocha-framework": "^0.2.12",
+    "wdio-sauce-service": "^0.2.2",
+    "webdriverio": "^4.0.5"
   },
   "license": "MIT"
 }
