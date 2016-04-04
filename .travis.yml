@@ -4,6 +4,9 @@ sudo: required
 services:
   - docker
 
+addons:
+  sauce_connect: true
+
 node_js:
   - "5.9.1"
 
