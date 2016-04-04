@@ -1,7 +1,7 @@
 var assert = require('assert');
 
-describe('DuckDuckGo search', function() {
-    it('searches for WebdriverIO', function() {
+describe('Hackaton site', function() {
+    it('should launch homepage', function() {
         browser.url('http://localhost:5000/');
         var title = browser.getTitle();
         console.log('Title is: ' + title);

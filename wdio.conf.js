@@ -46,6 +46,12 @@ exports.config = {
     //
     capabilities: [{
         browserName: 'firefox'
+    }, {
+        browserName: 'chrome'
+    }, {
+        browserName: 'MicrosoftEdge',
+        platform: 'Windows 10',
+        version: '13.10586'
     }],
     //
     // ===================
