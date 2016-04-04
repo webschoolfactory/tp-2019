@@ -26,6 +26,7 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
   - sudo mv /home/travis/build/webschoolfactory/tp-2019/.env.travis /home/travis/build/webschoolfactory/tp-2019/.env
 install:
+  - npm i
   - docker-compose build
 before_script:
   - docker-compose up -d
@@ -33,3 +34,4 @@ script:
   - docker version
   - docker-compose version
   - ./.bin/docker-test.sh
+  - npm run e2e
