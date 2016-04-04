@@ -7,9 +7,9 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "_mocha --reporter spec --timeout 5000 test/**/*.js",
-    "coverage": "istanbul cover _mocha -- --reporter spec --timeout 5000 test/**/*.js",
+    "coverage": "istanbul cover _mocha -- --reporter spec --timeout 5000 test/specs/**/*.js",
     "coveralls": "npm run coverage && ./node_modules/.bin/coveralls < coverage/lcov.info",
+    "test": "_mocha --reporter spec --timeout 5000 test/specs/**/*.js",
     "e2e": "./node_modules/.bin/wdio"
   },
   "dependencies": {
