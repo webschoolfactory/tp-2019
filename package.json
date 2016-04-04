@@ -7,7 +7,9 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "mocha --reporter spec --timeout 5000"
+    "test": "_mocha --reporter spec --timeout 5000 test/**/*.js",
+    "coverage": "istanbul cover _mocha -- --reporter spec --timeout 5000 test/**/*.js",
+    "coveralls": "npm run coverage && ./node_modules/.bin/coveralls < coverage/lcov.info"
   },
   "dependencies": {
     "async": "^1.5.2",
@@ -61,6 +63,8 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.2",
     "mocha": "^2.4.5",
     "supertest": "^1.2.0"
   },
